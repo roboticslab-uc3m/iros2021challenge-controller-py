@@ -31,3 +31,7 @@ while robot.step(timestep) != -1:
     print('Hello World from Python!', gps.getValues())
     motor_left.setVelocity(5.0)
     motor_right.setVelocity(5.0)
+    if gps.getValues()[0] > 4.5:
+        break
+
+print('Bye from Python!')
