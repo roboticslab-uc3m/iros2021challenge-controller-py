@@ -55,7 +55,7 @@ while robot.step(timestep) != -1:
     print('Hello World from Python!', gps_vals, gps_ee_vals, [x*180.0/3.14159 for x in imu_rads])
     motor_left.setVelocity(5.0)
     motor_right.setVelocity(5.0)
-    if gps.getValues()[0] > 4.5:
+    if gps_ee_vals[0] > 4.5:
         break
 
 print('Bye from Python!')
